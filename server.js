@@ -13,7 +13,7 @@ const PORT = parseInt(process.env.PORT, 10) || 4000;
 // Middleware
 app.use(express_1.default.json());
 // MongoDB Connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/mydatabase';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/d3db';
 mongoose_1.default.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -22,7 +22,7 @@ mongoose_1.default.connect(MONGODB_URI, {
     .catch(err => console.error(err));
 // Define routes
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Success!');
 });
 app.use('/api', userRoutes_1.default);
 // Start the server

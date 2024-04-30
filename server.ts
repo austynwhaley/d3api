@@ -22,7 +22,7 @@ mongoose.connect(MONGODB_URI, {
 
 // Define routes
 app.get('/', (req: Request, res: Response) => {
-    res.send('Hello World!');
+    res.send('Success!');
 });
 
 app.use('/api', userRoutes);
